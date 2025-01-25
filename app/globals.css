@@ -4,7 +4,6 @@
 
 /* ========================================== TAILWIND STYLES */
 @layer base {
-
   /* Remove scrollbar */
   .remove-scrollbar::-webkit-scrollbar {
     width: 0px;
@@ -28,7 +27,6 @@
 }
 
 @layer utilities {
-
   /* ===== UTILITIES */
   .sidebar {
     @apply remove-scrollbar w-full max-w-72 flex-col overflow-auto bg-black-800 px-7 py-10;
@@ -332,6 +330,7 @@
 .react-datepicker__time-container {
   border-left: 1px solid #363a3d !important;
 }
+
 .react-datepicker__time-list-item {
   display: flex !important;
   align-items: center !important;
