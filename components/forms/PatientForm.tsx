@@ -8,6 +8,10 @@ import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
 import CustomFormField from "@/components/ui/CustomeFormField";
 
+import PhoneInput from "react-phone-number-input";
+import { E164Number } from "libphonenumber-js";
+import "react-phone-number-input/style.css";
+
 export enum FormFieldType {
   INPUT = "input",
   TEXTAREA = "textarea",
@@ -47,7 +51,25 @@ const PatientForm = () => {
           label="Full Name"
           placeholder="Full Name"
           iconSrc="/assets/icons/user.svg"
+          iconAlt="user"
         />
+        <CustomFormField
+          fieldType={FormFieldType.INPUT}
+          control={form.control}
+          name="email"
+          label="Email"
+          placeholder="Enter your email"
+          iconSrc="/assets/icons/email.svg"
+          iconAlt="email"
+        />
+
+        <CustomFormField
+          fieldType={FormFieldType.PHONE_INPUT}
+          control={form.control}
+          name="phone"
+          label="Phone Number"
+        />
+
         <Button type="submit">Submit</Button>
       </form>
     </Form>
